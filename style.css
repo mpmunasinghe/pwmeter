@@ -1,0 +1,48 @@
+.container{
+	width:500px;
+	background-color:#0000FF;
+	height:300px;
+	border-radius:5px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.container font{
+	font-family:arial;
+	font-size:15px;
+	color:white;
+}
+
+.Mainstatus{
+	border-radius:5px; 
+	width:250px; 
+	height:20px; 
+	text-align:center;
+}
+
+.title{
+	width:150px;
+	height:25px;
+}
+
+
+.carrier{
+	width:250px;
+	height:auto;
+	float:left;
+}
+
+.carrier1{
+	margin-left:1em;
+	color:white;
+	width:175px;
+	height:auto;
+	float:left;
+}
+
+.carrier2{
+	color:white;
+	width:50px;
+	height:auto;
+	float:left;
+}

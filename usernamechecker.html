@@ -1,0 +1,97 @@
+<html>
+	<head>
+<!--
+ * --------------------------------------------------------------------
+ * Password Strength Meter
+ * by Munasinghe A.K.D.M.P. 2010/ICT/087
+ * for ICT-3014 Assignment-1 by Dr. Ajantha Athukorala
+ * Version: 1.0, 02.15.2013	
+ * --------------------------------------------------------------------
+ -->
+		<Title>Password Strength Meter - A.K.D.M.P Munasinghe - 2010/ICT/087</Title>
+		<link type="text/css" href="passwordmeter_2010_ICT_087.css" rel="stylesheet" />
+		<!--Javascript Code-->
+		<script type="text/javascript">
+			function initials(entry){
+				
+				//variables
+				var pass=entry;
+				var pwd1=entry.toLowerCase();
+				var charpwd=pwd1.split(" ");
+				var n=charpwd.length;
+				var surname=charpwd[n-1];
+					if (surname==" "){
+					}
+					else
+					{
+						var sursplit=surname.split("");
+						if(sursplit.length==0){
+							document.getElementById("total2").innerHTML="";
+						}
+						else if(sursplit.length==1){
+							
+							document.getElementById("total2").innerHTML=sursplit[0]+"qq";		
+						}else if(sursplit.length==2){
+							
+							document.getElementById("total2").innerHTML=sursplit[0]+sursplit[1]+"q";		
+						}
+						else if(sursplit.length>2){
+							document.getElementById("total2").innerHTML=sursplit[0]+sursplit[1]+sursplit[2];				
+						}
+					}
+					
+					if(n==1)	{
+						document.getElementById("total1").innerHTML="need atleast two names";
+					}					
+					else if(n==2)	{
+						var init1=charpwd[0].split("");
+						
+						if(charpwd[1].split("")==0){
+							document.getElementById("total1").innerHTML=init1[0];
+						}
+						else{
+						var init2=charpwd[1].split("");
+						document.getElementById("total1").innerHTML=init1[0]+init2[0];}
+					}					
+	//var init1=charpwd[0].split("");
+						//var init2=charpwd[1].split("");
+						
+						//document.getElementById("total1").innerHTML=init1[0]+init2[0];				
+						
+					
+					
+				}
+		</script>		
+		<script type="text/javascript">
+			function userid(usr){
+				var magula=usr;
+				if(isNaN(magula)){
+				document.getElementById("total3").innerHTML="not Numeric";
+				}
+				else if((magula.length<5)||(magula.length>5)){
+				
+				document.getElementById("total3").innerHTML="Only five charcters allowed";
+				}
+				else {
+					document.getElementById("total3").innerHTML=magula;
+				}
+				
+				}
+		</script>
+	</head>
+	<body>
+	<div class="container">
+		<center> <font>Password Strength Meter</br>
+ by Munasinghe A.K.D.M.P. 2010/ICT/087</br>
+ for ICT-3014 Assignment-1 by Dr. Ajantha Athukorala</br>
+ Version: 1.0, 02.15.2013</br>	</font></Center>
+	<!-- HTML codes-->
+		<input id="password" onkeyup="initials(this.value);" style="float:left; width:250px; height:30px; font-size:19px; margin-left:125px; margin-top:10px; margin-bottom:10px;"/></br></br>
+		<input id="usr" onkeyup="userid(this.value);" style="float:left; width:250px; height:30px; font-size:19px; margin-left:125px; margin-top:10px; margin-bottom:10px;"/></br></br>
+		<div id="total2" class="label"></div>/
+		<div id="total1" class="label"></div>/
+		<div id="total3" class="label"></div>
+
+		
+	</div>	
+	</center>
