@@ -199,7 +199,7 @@ Get weather report for all major cities around the world.
 </wsdl:binding>
 <wsdl:service name="GlobalWeather">
 <wsdl:port name="GlobalWeatherSoap" binding="tns:GlobalWeatherSoap">
-<soap:address location="http://173.201.44.188:8080/globalweather.asmx"/>
+<soap:address location=""/>
 </wsdl:port>
 <wsdl:port name="GlobalWeatherSoap12" binding="tns:GlobalWeatherSoap12">
 <soap12:address location="http://173.201.44.188:8080/globalweather.asmx"/>
@@ -208,7 +208,7 @@ Get weather report for all major cities around the world.
 <http:address location="http://173.201.44.188:89/globalweather.asmx"/>
 </wsdl:port>
 <wsdl:port name="GlobalWeatherHttpPost" binding="tns:GlobalWeatherHttpPost">
-<http:address location="http://173.201.44.188/globalweather.asmx"/>
+<http:address location=""/>
 </wsdl:port>
-</wsdl:service>
+</wsdl:service> 
 </wsdl:definitions>
